@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090d1f">
+<meta name="description" content="ATANU DIGITAL SOLUTION — SEO, digital marketing, social media growth, reputation management and creative digital services.">
+<title>ATANU DIGITAL SOLUTION | Grow Beyond Limits</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080c1b;--panel:#11182d;--muted:#a8b2cb;--white:#f7f9ff;--cyan:#52e5ff;--violet:#9272ff;--pink:#ff70c5;--line:rgba(255,255,255,.11)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.container{width:min(1160px,calc(100% - 40px));margin:auto}
+header{position:fixed;inset:0 0 auto;z-index:20;background:rgba(8,12,27,.72);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-family:Manrope,sans-serif;font-weight:800;letter-spacing:.4px;font-size:17px;display:flex;align-items:center;gap:10px}
+.brand-mark{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--cyan),var(--violet));display:grid;place-items:center;color:#07101d;font-weight:900;box-shadow:0 0 25px #52e5ff44}
+.navlinks{display:flex;gap:27px;color:#d2d9eb;font-size:13px}
+.navlinks a:hover{color:var(--cyan)}
+.menu{display:none;background:none;border:1px solid var(--line);color:white;padding:9px 12px;border-radius:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 20px;border-radius:12px;font-weight:700;font-size:14px;background:linear-gradient(110deg,var(--cyan),#9a8aff);color:#07101d;box-shadow:0 10px 35px #52e5ff25;transition:.25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 15px 40px #9272ff55}
+.btn-outline{background:transparent;color:white;border:1px solid #ffffff35;box-shadow:none}
+.hero{min-height:790px;padding:160px 0 95px;position:relative;display:flex;align-items:center;overflow:hidden}
+.orb{position:absolute;border-radius:50%;filter:blur(2px);pointer-events:none;animation:float 8s ease-in-out infinite}
+.orb.one{width:420px;height:420px;right:-80px;top:130px;background:radial-gradient(circle,#755cff35,transparent 68%)}
+.orb.two{width:390px;height:390px;left:-160px;bottom:0;background:radial-gradient(circle,#22d8ff25,transparent 70%);animation-delay:-3s}
+.gridbg{position:absolute;inset:0;background-image:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);background-size:58px 58px;mask-image:linear-gradient(to bottom,black,transparent 90%);opacity:.3}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:55px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 13px;border:1px solid #52e5ff45;border-radius:50px;color:var(--cyan);font-size:11px;letter-spacing:1.8px;text-transform:uppercase;background:#52e5ff0c}
+.pulse{width:7px;height:7px;border-radius:50%;background:#52e5ff;box-shadow:0 0 12px #52e5ff;animation:pulse 1.6s infinite}
+h1{font-family:Manrope,sans-serif;font-size:clamp(43px,6vw,74px);line-height:1.06;letter-spacing:-3px;margin:25px 0 20px}
+.gradient{background:linear-gradient(100deg,#fff 5%,var(--cyan) 48%,#ad8aff 90%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:570px;color:var(--muted);font-size:17px;line-height:1.8}
+.hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:32px}
+.trust{display:flex;gap:22px;flex-wrap:wrap;margin-top:37px;color:#aeb9d1;font-size:12px}
+.trust span:before{content:"✓";color:var(--cyan);margin-right:8px}
+.visual{height:440px;position:relative;display:grid;place-items:center}
+.ring{position:absolute;border:1px solid #7f83ff35;border-radius:50%;width:360px;height:360px;animation:spin 24s linear infinite}
+.ring:before,.ring:after{content:"";position:absolute;width:12px;height:12px;border-radius:50%;background:var(--cyan);box-shadow:0 0 20px var(--cyan);top:45px;left:35px}
+.ring:after{background:var(--pink);box-shadow:0 0 20px var(--pink);top:auto;left:auto;bottom:40px;right:28px}
+.core{width:225px;height:225px;border-radius:40px;transform:rotate(-8deg);background:linear-gradient(145deg,#1b3150,#15162f 65%);border:1px solid #ffffff2b;box-shadow:0 25px 90px #604dff35,inset 0 0 45px #52e5ff10;display:grid;place-items:center;text-align:center;animation:float 5s ease-in-out infinite}
+.core-inner{transform:rotate(8deg)}
+.core strong{font-family:Manrope;font-size:56px;letter-spacing:-4px;background:linear-gradient(135deg,var(--cyan),#b59aff);-webkit-background-clip:text;color:transparent}
+.core small{display:block;color:#c5d0e8;letter-spacing:3px;font-size:10px;margin-top:3px}
+.float-card{position:absolute;padding:13px 16px;border:1px solid #ffffff22;border-radius:14px;background:#111a31dd;backdrop-filter:blur(14px);box-shadow:0 15px 40px #0005;font-size:12px;animation:float 6s ease-in-out infinite}
+.float-card b{display:block;font-size:14px;margin-bottom:3px}.float-card span{color:var(--muted)}
+.fc1{top:55px;right:0}.fc2{bottom:55px;left:0;animation-delay:-2s}.fc3{bottom:30px;right:5px;animation-delay:-4s}
+section{padding:100px 0;position:relative}
+.section-head{text-align:center;max-width:690px;margin:0 auto 48px}
+.kicker{color:var(--cyan);font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:800}
+h2{font:800 clamp(30px,4vw,45px)/1.2 Manrope;margin:13px 0 14px;letter-spacing:-1.5px}
+.section-head p{color:var(--muted);line-height:1.75}
+.services{background:linear-gradient(180deg,#0b1022,#0d1326 50%,#080c1b)}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.service{padding:25px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#151e36aa,#10162a);transition:.35s;min-height:205px;position:relative;overflow:hidden}
+.service:after{content:"";position:absolute;width:120px;height:120px;right:-70px;bottom:-75px;border-radius:50%;background:#6b69ff33;filter:blur(20px);transition:.35s}
+.service:hover{transform:translateY(-8px);border-color:#52e5ff77;box-shadow:0 18px 50px #0005}
+.service:hover:after{transform:scale(2)}
+.ico{width:45px;height:45px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,#52e5ff24,#9272ff30);border:1px solid #ffffff16;font-size:21px;margin-bottom:18px}
+.service h3{font:700 17px Manrope;margin-bottom:9px}
+.service p{font-size:13px;line-height:1.7;color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:65px;align-items:center}
+.about-art{min-height:350px;border-radius:25px;border:1px solid var(--line);background:radial-gradient(circle at 30% 25%,#52e5ff30,transparent 35%),radial-gradient(circle at 75% 70%,#9272ff38,transparent 38%),#11182d;display:grid;place-items:center;position:relative;overflow:hidden}
+.about-art .big{font:800 100px Manrope;letter-spacing:-9px;background:linear-gradient(120deg,var(--cyan),#a78bff);-webkit-background-clip:text;color:transparent;text-shadow:0 0 55px #52e5ff22}
+.about-art:before,.about-art:after{content:"";position:absolute;width:230px;height:230px;border:1px solid #ffffff20;border-radius:50%;animation:spin 18s linear infinite}
+.about-art:after{width:300px;height:300px;animation-direction:reverse}
+.about-copy p{color:var(--muted);line-height:1.85;margin:15px 0}
+.points{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:25px}
+.point{padding:13px;border-radius:12px;background:#ffffff08;border:1px solid var(--line);font-size:13px}
+.point b{color:var(--cyan);margin-right:7px}
+.process{background:#0c1224}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.step{padding:24px 20px;border:1px solid var(--line);border-radius:17px;background:#121a30}
+.step-no{font:800 34px Manrope;color:#52e5ff55;margin-bottom:22px}
+.step h3{font:700 16px Manrope;margin-bottom:9px}.step p{font-size:13px;color:var(--muted);line-height:1.7}
+.contact-box{border:1px solid #ffffff20;border-radius:25px;padding:55px;background:radial-gradient(circle at 90% 0%,#8a6aff30,transparent 38%),linear-gradient(120deg,#131f39,#11152c);display:flex;justify-content:space-between;align-items:center;gap:35px}
+.contact-box p{color:var(--muted);line-height:1.7;max-width:560px}
+.contact-links{display:flex;gap:11px;flex-wrap:wrap;margin-top:25px}
+footer{padding:30px 0;border-top:1px solid var(--line);color:#8f9ab4;font-size:12px}
+.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.socials{display:flex;gap:17px}.socials a:hover{color:var(--cyan)}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.show{opacity:1;transform:translateY(0)}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes pulse{50%{opacity:.35;transform:scale(.7)}}
+@media(max-width:850px){.hero-grid,.about-grid{grid-template-columns:1fr}.hero{padding-top:135px}.visual{height:360px}.ring{width:300px;height:300px}.service-grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.contact-box{display:block;padding:35px}}
+@media(max-width:600px){.nav{height:68px}.navlinks{display:none;position:absolute;top:68px;left:0;right:0;padding:22px;background:#0d1429;flex-direction:column;gap:18px;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.menu{display:block}.nav>.btn{display:none}.hero{min-height:auto;padding:125px 0 70px}.hero-grid{gap:10px}h1{letter-spacing:-2px}.hero p{font-size:15px}.visual{height:330px}.ring{width:270px;height:270px}.core{width:180px;height:180px}.core strong{font-size:45px}.fc1{right:-2px;top:20px}.fc2{left:0;bottom:30px}.fc3{right:0;bottom:5px}.service-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.step{padding:18px 14px}.points{grid-template-columns:1fr}section{padding:75px 0}.contact-box{padding:28px 22px}.foot{flex-direction:column}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header><div class="container nav">
+<a class="brand" href="#home"><span class="brand-mark">A</span><span>ATANU <span style="color:var(--cyan)">DIGITAL</span> SOLUTION</span></a>
+<nav class="navlinks" id="navlinks"><a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#process">How It Works</a><a href="#contact">Contact</a></nav>
+<a class="btn" href="#contact">Let's Talk ↗</a><button class="menu" id="menu" aria-label="Open menu">☰</button>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="gridbg"></div><div class="orb one"></div><div class="orb two"></div>
+<div class="container hero-grid">
+<div class="reveal"><div class="eyebrow"><span class="pulse"></span> YOUR DIGITAL GROWTH PARTNER</div>
+<h1>Grow Your Brand.<br><span class="gradient">Go Beyond Limits.</span></h1>
+<p>Smart digital solutions that help businesses get discovered, build trust and grow online. From SEO to social media — let's turn your goals into measurable progress.</p>
+<div class="hero-actions"><a class="btn" href="#contact">Start a Project <span>↗</span></a><a class="btn btn-outline" href="#services">Explore Services ↓</a></div>
+<div class="trust"><span>Creative strategies</span><span>Growth-focused</span><span>Clear communication</span></div></div>
+<div class="visual reveal"><div class="ring"></div><div class="core"><div class="core-inner"><strong>ADS</strong><small>DIGITAL SOLUTION</small></div></div>
+<div class="float-card fc1"><b>✦ SEO & Visibility</b><span>Get found online</span></div><div class="float-card fc2"><b>↗ Social Growth</b><span>Build your community</span></div><div class="float-card fc3"><b>◎ Brand Presence</b><span>Make an impact</span></div></div>
+</div></section>
+<section class="services" id="services"><div class="container"><div class="section-head reveal"><div class="kicker">WHAT WE DO</div><h2>Digital Services That <span class="gradient">Move You Forward</span></h2><p>A complete range of digital services to strengthen your online presence, connect with the right audience and support sustainable growth.</p></div>
+<div class="service-grid">
+<div class="service reveal"><div class="ico">⌕</div><h3>Search Engine Optimization (SEO)</h3><p>On-page, off-page, technical SEO, keyword research, local SEO, website audits and content optimization.</p></div>
+<div class="service reveal"><div class="ico">📣</div><h3>Digital Marketing</h3><p>Digital strategy, campaign planning, lead generation, audience targeting and performance improvement.</p></div>
+<div class="service reveal"><div class="ico">◎</div><h3>Social Media Management</h3><p>Facebook, Instagram, LinkedIn and TikTok page management, content calendars and engagement.</p></div>
+<div class="service reveal"><div class="ico">↗</div><h3>Social Media Growth</h3><p>Organic audience growth, profile optimization, hashtag research, community building and reach strategy.</p></div>
+<div class="service reveal"><div class="ico">★</div><h3>Google Business Profile</h3><p>Business profile setup, optimization, local visibility, updates and profile management.</p></div>
+<div class="service reveal"><div class="ico">✧</div><h3>Google Review & Reputation</h3><p>Review response support, reputation monitoring and ethical customer-feedback strategies. No fake reviews.</p></div>
+<div class="service reveal"><div class="ico">⌘</div><h3>Google Ads & PPC</h3><p>Search and display campaign setup, keyword targeting, ad copy and campaign optimization.</p></div>
+<div class="service reveal"><div class="ico">f</div><h3>Facebook & Instagram Ads</h3><p>Meta ads setup, campaign management, retargeting, audience testing and lead campaigns.</p></div>
+<div class="service reveal"><div class="ico">✍</div><h3>Content Writing & Copywriting</h3><p>SEO articles, website content, product descriptions, captions and persuasive ad copy.</p></div>
+<div class="service reveal"><div class="ico">▣</div><h3>Graphic Design & Creatives</h3><p>Social media posts, banners, ad creatives, thumbnails and branded visual content.</p></div>
+<div class="service reveal"><div class="ico">▶</div><h3>Video Editing & Reels</h3><p>Short-form video editing, reels, shorts, subtitles and promotional video content.</p></div>
+<div class="service reveal"><div class="ico">⌁</div><h3>YouTube Channel Growth</h3><p>Channel SEO, video optimization, titles, descriptions, thumbnails and content strategy.</p></div>
+<div class="service reveal"><div class="ico">✉</div><h3>Email Marketing</h3><p>Email campaigns, newsletter setup, audience segmentation and automated follow-up flows.</p></div>
+<div class="service reveal"><div class="ico">◈</div><h3>Backlinks & Link Building</h3><p>Relevant outreach, backlink audits and quality-focused link-building strategies.</p></div>
+<div class="service reveal"><div class="ico">⌂</div><h3>Website Design & Optimization</h3><p>Responsive landing pages, website updates, speed improvements and conversion-focused layouts.</p></div>
+<div class="service reveal"><div class="ico">▤</div><h3>Virtual Assistance & Data Entry</h3><p>Web research, data collection, spreadsheet work, product uploads and admin support.</p></div>
+<div class="service reveal"><div class="ico">♧</div><h3>Affiliate & Influencer Marketing</h3><p>Creator research, collaboration support, affiliate campaign planning and outreach.</p></div>
+<div class="service reveal"><div class="ico">◉</div><h3>Analytics & Reporting</h3><p>Google Analytics, Search Console, tracking setup and easy-to-understand performance reports.</p></div>
+</div></div></section>
+<section id="about"><div class="container about-grid"><div class="about-art reveal"><div class="big">ADS</div></div><div class="about-copy reveal"><div class="kicker">ABOUT ATANU DIGITAL SOLUTION</div><h2>Ideas Into Impact.<br><span class="gradient">Strategy Into Growth.</span></h2><p>ATANU DIGITAL SOLUTION is focused on helping individuals, creators and businesses build a stronger digital presence. We bring creative thinking and practical digital skills together to support your next step online.</p><p>Every project starts with understanding your goals. Then we focus on the right service, clear communication and quality work.</p><div class="points"><div class="point"><b>✦</b> Client-focused approach</div><div class="point"><b>✦</b> Modern digital skills</div><div class="point"><b>✦</b> Quality-first mindset</div><div class="point"><b>✦</b> Growth-oriented work</div></div></div></div></section>
+<section class="process" id="process"><div class="container"><div class="section-head reveal"><div class="kicker">SIMPLE PROCESS</div><h2>From First Chat to <span class="gradient">Final Delivery</span></h2><p>A straightforward process keeps your project clear and moving in the right direction.</p></div><div class="steps">
+<div class="step reveal"><div class="step-no">01</div><h3>Tell Us Your Goal</h3><p>Share your business, audience and what you want to achieve.</p></div>
+<div class="step reveal"><div class="step-no">02</div><h3>Get a Plan</h3><p>We discuss the right service, scope, timeline and next steps.</p></div>
+<div class="step reveal"><div class="step-no">03</div><h3>Work Begins</h3><p>We focus on the agreed tasks and keep communication open.</p></div>
+<div class="step reveal"><div class="step-no">04</div><h3>Review & Deliver</h3><p>Review the work, share feedback and receive the final delivery.</p></div>
+</div></div></section>
+<section id="contact"><div class="container"><div class="contact-box reveal"><div><div class="kicker">LET'S WORK TOGETHER</div><h2>Ready to grow <span class="gradient">your digital presence?</span></h2><p>Have a project in mind or need help choosing the right service? Send a message — let's talk about your goals.</p><div class="contact-links"><a class="btn" href="https://wa.me/8801877259123" target="_blank" rel="noopener">WhatsApp ↗</a><a class="btn btn-outline" href="mailto:atanuworkers@gmail.com">Email Us ✉</a></div></div><div style="min-width:190px;color:#c5cee2;font-size:13px;line-height:2.2"><b style="color:white">Contact Details</b><br>✉ atanuworkers@gmail.com<br>☏ +880 1877-259123<br>🌐 Available worldwide</div></div></div></section>
+</main>
+<footer><div class="container foot"><div>© <span id="year"></span> ATANU DIGITAL SOLUTION. All rights reserved.</div><div class="socials"><a href="https://www.facebook.com/share/1E5S7fGZ9e/" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/atanu86769?obrf=aTRmMGdkOXd1Mzg5" target="_blank" rel="noopener">Instagram</a><a href="mailto:atanuworkers@gmail.com">Gmail</a><a href="https://wa.me/8801877259123" target="_blank" rel="noopener">WhatsApp</a></div></div></footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const menu=document.getElementById('menu'),links=document.getElementById('navlinks');
+menu.addEventListener('click',()=>links.classList.toggle('open'));
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');observer.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body></html>
